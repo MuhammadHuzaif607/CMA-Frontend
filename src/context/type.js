@@ -1,0 +1,12 @@
+export const ADD_CONTACT = 'add_contact';
+export const GET_CONTACT = 'get_contact';
+export const EDIT_CONTACT = 'edit_contact';
+export const DELETE_CONTACT = 'delete_contact';
+export const CURRENT_CONTACT = 'current_contact';
+export const SEARCH_CONTACT = 'search_contact';
+export const REGISTER_SUCCESS = 'register_success';
+export const REGISTER_FAIL = 'register_fail';
+export const LOGIN_SUCCESS = 'login_success';
+export const LOGOUT = 'logout';
+export const LOAD_USER = 'load_user';
+export const LOGIN_FAIL = 'login_fail';
