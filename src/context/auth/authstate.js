@@ -29,7 +29,11 @@ const AuthState = ({ children }) => {
           'Content-Type': 'application/json',
         },
       };
-      const res = await axios.post('/api/users', data, config);
+      const res = await axios.post(
+        'https://cma-backend-0.vercel.app/api/users',
+        data,
+        config
+      );
       dispatch({
         type: REGISTER_SUCCESS,
         payload: res.data.token,
@@ -49,7 +53,7 @@ const AuthState = ({ children }) => {
       setAuthToken(localStorage.token);
     }
     try {
-      const res = await axios.get('/api/auth');
+      const res = await axios.get('https://cma-backend-0.vercel.app/api/auth');
       dispatch({
         type: LOAD_USER,
         payload: res.data,
@@ -67,7 +71,7 @@ const AuthState = ({ children }) => {
           'Content-Type': 'application/json',
         },
       };
-      const res = await axios.post('/api/auth', data, config);
+      const res = await axios.post('https://cma-backend-0.vercel.app/api/auth', data, config);
       dispatch({
         type: LOGIN_SUCCESS,
         payload: res.data.token,

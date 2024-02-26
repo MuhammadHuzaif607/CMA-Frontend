@@ -29,7 +29,11 @@ const ContactState = ({ children }) => {
         },
       };
       setAuthToken(localStorage.token);
-      const res = await axios.post('/api/contact', data, config);
+      const res = await axios.post(
+        'https://cma-backend-0.vercel.app/api/contact',
+        data,
+        config
+      );
       dispatch({
         type: ADD_CONTACT,
         payload: res.data,
@@ -56,7 +60,11 @@ const ContactState = ({ children }) => {
         },
       };
       // eslint-disable-next-line no-unused-vars
-      const res = await axios.put(`/api/contact/${data.id}`, data, config);
+      const res = await axios.put(
+        `https://cma-backend-0.vercel.app/api/contact/${data.id}`,
+        data,
+        config
+      );
       dispatch({
         type: EDIT_CONTACT,
         payload: res.data.contact,
@@ -75,7 +83,11 @@ const ContactState = ({ children }) => {
         },
       };
       // eslint-disable-next-line no-unused-vars
-      const res = await axios.delete(`/api/contact/${data.id}`, data, config);
+      const res = await axios.delete(
+        `https://cma-backend-0.vercel.app/api/contact/${data.id}`,
+        data,
+        config
+      );
       dispatch({
         type: DELETE_CONTACT,
         payload: data,
@@ -102,7 +114,10 @@ const ContactState = ({ children }) => {
         },
       };
       setAuthToken(localStorage.token);
-      const res = await axios.get('/api/contact', config);
+      const res = await axios.get(
+        'https://cma-backend-0.vercel.app/api/contact',
+        config
+      );
       dispatch({
         type: GET_CONTACT,
         payload: res.data,
